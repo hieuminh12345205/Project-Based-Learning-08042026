@@ -1,0 +1,635 @@
+/* 1. Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #231F1F;
+    background-color: #fff;
+}
+
+:root {
+    --primary-color: #129C6E;
+    --text-color: #231F1F;
+    --grey-color: #aaa;
+    --white-color: #fff;
+    --bg-light: #F9FAFB;
+    --bg-dark: #121C26;
+    --radius-sm: 8px;
+    --radius-md: 15px;
+    --radius-lg: 50px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border-radius: var(--radius-sm);
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    border-radius: var(--radius-md);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-info {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-info:hover {
+    background-color: #0d7a54;
+}
+
+.btn-danger {
+    background-color: #E21C1C;
+    color: var(--white-color);
+}
+
+.btn-danger:hover {
+    background-color: #c41515;
+}
+
+.btn-warning {
+    background-color: #F8B400;
+    color: #231F1F;
+}
+
+.btn-warning:hover {
+    background-color: #d99900;
+}
+
+.btn-round {
+    border-radius: var(--radius-lg);
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.text-grey {
+    color: var(--grey-color);
+}
+
+.form-control-input {
+    border: 1px solid var(--grey-color);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control-input:focus {
+    border-color: var(--primary-color);
+}
+
+/* 2. Header Top */
+#header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--white-color);
+}
+
+.logo p {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.main-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu-item a {
+    color: rgba(35, 31, 31, 0.5);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.main-menu-item-active a {
+    color: #231F1F;
+}
+
+.header-button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* 3. Header Bottom (Hero) */
+#header .header-bottom {
+    display: flex;
+    padding: 50px;
+    background-color: var(--bg-light);
+}
+
+.banner-description {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.banner-description-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-description-break {
+    width: 100px;
+    height: 4px;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 20px;
+}
+
+.banner-description-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.banner-description-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.banner-image-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.banner-image-wrap img[src="./images/person.png"] {
+    max-width: 100%;
+}
+
+.banner-image-wrap img[src="./images/card.png"] {
+    width: 80%;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.banner-image-wrap div:last-child {
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* 4. Main Sections & Analyst Section */
+#main h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+#analyst {
+    padding: 50px;
+}
+
+#analyst > div:first-of-type {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+#analyst > div:first-of-type div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#analyst > div:last-of-type {
+    display: flex;
+    gap: 30px;
+}
+
+#analyst > div:last-of-type > div:first-child {
+    flex: 1;
+}
+
+#analyst > div:last-of-type > div:first-child p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#analyst > div:last-of-type > div:last-child {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.analyst-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analyst-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.analyst-box h3 {
+    font-size: 18px;
+}
+
+/* 5. Feature Section */
+#feature {
+    padding: 50px;
+    background-color: var(--bg-light);
+}
+
+#feature > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#feature > div:first-child h1 {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 2;
+}
+
+#feature > div:first-child p {
+    flex: 2;
+    padding: 0 20px;
+}
+
+#feature > div:first-child div {
+    flex: 1;
+    text-align: right;
+}
+
+#feature > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h1 {
+    font-size: 18px;
+}
+
+/* 6. Benefit Section */
+#benifit {
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+#benifit > div:first-child {
+    flex: 1;
+}
+
+#benifit > div:first-child h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#benifit > div:first-child ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+#benifit > div:first-child ul li::before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+#benifit > div:last-child {
+    flex: 1;
+    position: relative;
+}
+
+#benifit > div:last-child img {
+    max-width: 100%;
+}
+
+.benefit-overlay-card {
+    position: absolute;
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefit-card-1 {
+    bottom: 20px;
+    left: 20px;
+}
+
+.benefit-card-2 {
+    top: 20px;
+    right: 20px;
+}
+
+.benefit-card-3 {
+    bottom: 60px;
+    right: 20px;
+}
+
+/* 7. Plan Section */
+#plan {
+    padding: 50px;
+    background-color: var(--bg-light);
+}
+
+#plan > div:first-child {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#plan > div:first-child h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#plan .plan-toggle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#plan > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.plan-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h1 {
+    font-size: 24px;
+}
+
+.plan-card p span {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.plan-card ul li {
+    color: #231F1F;
+}
+
+.plan-card-pro {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.plan-card-pro p span {
+    color: var(--white-color);
+}
+
+.plan-card-pro ul li {
+    color: var(--white-color);
+}
+
+.plan-card-pro .btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* 8. Contact Section */
+#contact {
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+#contact > div:first-child {
+    flex: 1;
+}
+
+#contact > div:first-child h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact > div:last-child {
+    flex: 1;
+    background-color: var(--bg-dark);
+    color: var(--white-color);
+    padding: 50px;
+    border-radius: var(--radius-md);
+}
+
+#contact .form-group {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: block;
+}
+
+#contact .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact .form-group input, #contact .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+}
+
+#contact .form-group input::placeholder, #contact .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#contact .form-group textarea {
+    resize: none;
+}
+
+/* 9. Footer */
+#footer {
+    background-color: var(--bg-dark);
+    color: var(--white-color);
+    padding: 50px;
+}
+
+#footer > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#footer .logo p {
+    color: var(--primary-color);
+}
+
+#footer > div:first-child > div:first-child p {
+    margin-bottom: 15px;
+}
+
+#footer nav ul li {
+    margin-bottom: 10px;
+}
+
+#footer nav ul li:first-child a {
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+#footer nav ul li a {
+    color: rgba(255,255,255,0.7);
+}
+
+#footer > div:last-child {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer > div:last-child > div {
+    display: flex;
+    gap: 15px;
+}
+/* Sửa lỗi Menu và Nút Login/Signup bị xếp dọc ở Header */
+.header-top > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Sửa lỗi nút View Demo chưa đẹp */
+.banner-description-btn .btn:last-child {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: var(--radius-md);
+}
+
+/* Sửa phần Rating (Ngôi sao) ở phần Analyst bị xếp dọc */
+#analyst > div:last-of-type > div:first-child > div {
+    display: flex; /* Dàn ngang 2 khối đánh giá */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#analyst > div:last-of-type > div:first-child > div > div {
+    display: flex; /* Dàn ngang icon sao và text */
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+/* Chỉnh lại Form input ở Hero banner cho gọn gàng */
+.form-group {
+    justify-content: space-between;
+    width: 300px;
+}
+
+.form-group input {
+    width: 80px;
+}
